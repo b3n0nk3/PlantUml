@@ -1,14 +1,12 @@
 @startuml
 left to right direction
 
-:Usuario: -- (Iniciar sesion)
-:Usuario: -- (Recuperar contraseña)
-:Usuario: -- (Modificar contraseña)
-:Usuario: -- (Cerrar sesion)
-:Administrador: -- (Registrar usuario)
-:Administrador: -- (Instalar programa)
+:Ciudadano: -- (Registrar entrada)
+:Ciudadano extranjero: -- (Tomar huellas)
 
-:Usuario: <|-- :Administrador:
+(Tomar huellas) ..> (Registrar entrada) : extend
+
+:Ciudadano: <|-- :Ciudadano extranjero:
 
 
 @enduml
