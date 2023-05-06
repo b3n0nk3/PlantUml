@@ -1,7 +1,12 @@
 @startuml
-top to bottom direction
+left to right direction
 
-(Pagar) <|-- (Pagar en efectivo)
-(Pagar) <|-- (Pagar en tarjeta)
+:Cliente: -- (Meter dinero)
+:Cliente: -- (Pedir azucar)
+:Cliente: -- (Pedir Producto)
+:Cliente: -- (Cancelar)
+(Pedir Producto) ..> (Devolver dinero) : include
+(Cancelar) ..> (Devolver dinero) : include
+
 
 @enduml
