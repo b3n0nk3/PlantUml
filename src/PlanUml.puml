@@ -1,12 +1,22 @@
 @startuml
 left to right direction
+usecase uc as "**Sacar dinero**
+--
++solicitud hecha"
 
-:Ciudadano: -- (Registrar entrada)
-:Ciudadano extranjero: -- (Tomar huellas)
+usecase uc2 as "**Retener tarjeta**
 
-(Tomar huellas) ..> (Registrar entrada) : extend
+"
 
-:Ciudadano: <|-- :Ciudadano extranjero:
+skinparam usecase{
+BackgroundColor Seagreen
+BorderColor green
+ArrowColor green
+}
 
+note "Description \n -- \n condición: \n  { historia sospechos } \n punto de extensión: \n  solicitud hecha " as des
+
+ (uc) <.. des : <<Extend>>
+ des .. (uc2)
 
 @enduml
