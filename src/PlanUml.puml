@@ -1,6 +1,7 @@
 @startuml
-left to right direction
+top to bottom direction
 
-(Accder) <.. (Registrarse) : extends
+(Pagar) <|-- (Pagar en efectivo)
+(Pagar) <|-- (Pagar en tarjeta)
 
 @enduml
